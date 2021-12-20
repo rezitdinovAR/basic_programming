@@ -1,10 +1,11 @@
 #Вариант 9
 import math
 x,n=map(int,input('Введите x и n через пробел').split())
-Summa_Ryada=0
+b=1
+Summa_Ryada=b
 for i in range(n):
-    Summa_Ryada+=((-1)**n*x**(2*n))/math.factorial(2*n)
-    x+=1
+    b=b*(((-1)*(x**2))/(2*i*(2*i-1)))
+    Summa_Ryada+=b
 print(Summa_Ryada)
 def getPhrase():
     a=input("Введите фразу от 10 символов")
